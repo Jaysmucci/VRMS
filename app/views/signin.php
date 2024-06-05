@@ -1,6 +1,27 @@
 <?php
-include_once 'header.php';
+//  require dirname(__DIR__) . './../helpers.php';
+// include_once 'header.php';
+// loadController('signin-con');
+include dirname(__DIR__) . './controllers/signin-con.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      QR code
+    </title>
+  <link rel="icon" href="favicon.ico"><link href="css/style.css" rel="stylesheet"></head>
+
+  <body
+    x-data="{ page: 'ecommerce', 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark text-bodydark bg-boxdark-2': darkMode === true}"
+  >
 
 <div class="flex h-screen overflow-hidden">
     
@@ -23,16 +44,15 @@ include_once 'header.php';
                       src="src/images/logo/logo.svg"
                       alt="Logo"
                     />
-                    <img
+                    <!-- <img
                       class="dark:hidden"
                       src="src/images/logo/logo-dark.svg"
                       alt="Logo"
-                    />
+                    /> -->
                   </a>
 
                   <p class="font-medium 2xl:px-20">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    suspendisse.
+                  Welcome to VEHICLE MANAGEMENT SYSTEM
                   </p>
 
                   <span class="mt-15 inline-block">
@@ -51,10 +71,13 @@ include_once 'header.php';
                   <h2
                     class="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2"
                   >
-                    Sign In to TailAdmin
+                    Sign In to VMS
                   </h2>
 
-                  <form>
+                  <form method="post" action="" novalidate>
+                    <?php if($is_invalid): ?>
+                    <em style="color: red;">Invalid Login</em>
+                    <?php endif; ?>
                     <div class="mb-4">
                       <label
                         class="mb-2.5 block font-medium text-black dark:text-white"
@@ -63,7 +86,7 @@ include_once 'header.php';
                       <div class="relative">
                         <input
                           type="email"
-                          placeholder="Enter your email" name="email"
+                          placeholder="Enter your email" name="email" value="<?= htmlspecialchars($_POST["email"] ??  "") ?> "
                           class="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
                         />
 
@@ -125,13 +148,14 @@ include_once 'header.php';
 
                     <div class="mb-5">
                       <input
-                        type="submit"
+                        type="submit" 
                         value="Sign In" name="submit"
                         class="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-medium text-white transition hover:bg-opacity-90"
+                        id="signin"
                       />
                     </div>
 
-                    <button
+                    <button disabled
                       class="flex w-full items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 font-medium hover:bg-opacity-70 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-70"
                     >
                       <span>

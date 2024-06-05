@@ -30,7 +30,6 @@ class Database{
             $this->conn = new PDO($dsn, $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            echo 'Connected Successfully!';
         } catch (\Throwable $e) {
             //throw $th;
             $this->warn($e);
@@ -55,7 +54,7 @@ class Database{
     public function insert($table, $data){
         $columns = implode(',', array_keys($data));
         $placeholders = implode(',', array_fill(0, count($data), "?"));
-        $sql = 'INSERT INTO $table ($columns) VALUES ($placeholders)';
+        $sql = "INSERT INTO $table ($columns) VALUES ($placeholders)";
 
         $stmt = $this->conn->prepare($sql);
         return $stmt->execute(array_values($data));
@@ -70,7 +69,7 @@ class Database{
                 $conditionClauses[] = "$column = ?";
             }
 
-            $sql .= " WHERE " . implode("AND", $conditionClauses);
+            $sql .= " WHERE " . implode(" AND ", $conditionClauses);
         }
         try {
             
@@ -109,7 +108,7 @@ class Database{
             $conditionClauses[] = "$column = ?";
         }
 
-        $sql = "DELETE FROM $table WHERE " . implode("AND", $conditionClauses);
+        $sql = "DELETE FROM $table WHERE " . implode(" AND ", $conditionClauses);
         $stmt = $this->conn->prepare($sql);
 
         return $stmt->execute(array_values($conditions));
@@ -117,14 +116,14 @@ class Database{
 }
 
 // usage
-$db = new Database();
-$database = $db->connect();
+// $db = new Database();
+// $database = $db->connect();
 
-$condition = ['name' => 'Jane Smith'];
-$result =  $db->select('owners', $condition);
+// $condition = ['name' => 'Jane Smith'];
+// $result =  $db->select('owners', $condition);
 
-if ($result) {
-    print_r($result);
-} else {
-    echo 'No records found';
-}
+// if ($result) {
+//     print_r($result);
+// } else {
+//     echo 'No records found';
+// }

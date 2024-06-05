@@ -7,7 +7,10 @@
     <title>
       QR code
     </title>
-  <link rel="icon" href="favicon.ico"><link href="css/style.css" rel="stylesheet"></head>
+  <link rel="icon" href="favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/extra.css">
+</head>
 
   <body
     x-data="{ page: 'ecommerce', 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }"

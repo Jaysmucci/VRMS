@@ -99,7 +99,7 @@ loadView("navbar");
               @click.prevent="selected = (selected === 'USER' ? '':'USER')"
               :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'USER') || (page === 'ecommerce' || page === 'analytics' || page === 'stocks') }"
             >
-            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <?xml version="1.0" encoding="utf-8"?> <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg 
             class="fill-current" 
             width="20px" 
@@ -143,21 +143,21 @@ loadView("navbar");
                 <li>
                   <a
                     class="uppercase group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="drivers.html"
+                    href="drivers"
                     :class="page === 'drivers' && '!text-white'"
                     >drivers
                   </a>
                   <li>
                     <a
                       class="uppercase group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                      href="owners.html"
+                      href="owners"
                       :class="page === 'owners' && '!text-white'"
                       >owners
                     </a>
                     <li>
                       <a
                         class="uppercase group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                        href="pub-users.html"
+                        href="pub-users"
                         :class="page === 'pub-users' && '!text-white'"
                         >Pub Users
                       </a>
@@ -197,7 +197,7 @@ loadView("navbar");
           <li>
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-              href="vehicle-profile.html"
+              href="vehicle-profile"
               @click="selected = (selected === 'Profile' ? '':'Profile')"
               :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Profile') && (page === 'profile') }"
               :class="page === 'profile' && 'bg-graydark'"

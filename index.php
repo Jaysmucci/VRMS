@@ -1,7 +1,4 @@
 <?php
 
-include_once './app/views/helpers.php';
+include_once 'helpers.php';
 
-loadView('header');
-loadView('navbar');
-loadView('signin');
