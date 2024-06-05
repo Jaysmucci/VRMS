@@ -9,5 +9,3 @@ $db = $database->connect();
 
 $vehicle  = new vehicleDetails($database);
 $details = $vehicle->getID();
-
-var_dump($details);
