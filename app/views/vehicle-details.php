@@ -19,10 +19,10 @@ loadView('sidebar');
   <div
     class="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11"
   >
-    <div class="flex items-center gap-2 sm:gap-4 lg:hidden">
+    <div class="flex items-center gap-2 sm:gap-4">
       <!-- Hamburger Toggle BTN -->
       <button
-        class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
+        class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark"
         @click.stop="sidebarToggle = !sidebarToggle"
       >
         <span class="relative block h-5.5 w-5.5 cursor-pointer">
@@ -53,11 +53,11 @@ loadView('sidebar');
         </span>
       </button>
       <!-- Hamburger Toggle BTN -->
-      <a class="block flex-shrink-0 lg:hidden" href="index.html">
-        <img src="src/images/logo/logo-icon.svg" alt="Logo" />
+      <a class="block flex-shrink-0 lg:hidden" href="home">
+        <!-- <img src="src/images/logo/logo-icon.svg" alt="Logo" /> -->
       </a>
     </div>
-    <div class="hidden sm:block">
+    <!-- <div class="hidden sm:block">
       <form action="https://formbold.com/s/unique_form_id" method="POST">
         <div class="relative">
           <button class="absolute left-0 top-1/2 -translate-y-1/2">
@@ -91,7 +91,7 @@ loadView('sidebar');
           />
         </div>
       </form>
-    </div>
+    </div> -->
 
     <div class="flex items-center gap-3 2xsm:gap-7">
       <ul class="flex items-center gap-2 2xsm:gap-4">
@@ -571,7 +571,7 @@ loadView('sidebar');
          <!-- ===== Main Content Start ===== -->
          <main>
           <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-            <div class="mx-auto max-w-242.5">
+            <div class="mx-auto">
               <!-- Breadcrumb Start -->
               <div
                 class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
@@ -641,13 +641,143 @@ loadView('sidebar');
         <div class="bg-white rounded-lg shadow-lg h-80 items-center justify-center p-4 grid grid-rows-2 gap-4">
           <?php if($qr && $qr !== 'No unit number') : ?>
             <img src="<?php echo htmlspecialchars($qr); ?>" alt="QR Code" class="bg-white w-40 h-40  border border-gray-300 mt-8">
-            <a href="../controllers/download.php?unit_no=<?php echo urlencode($unit_no) ?>"><button class="bg-blue-700 text-white px-11 py-2 rounded-lg">Download</button></a>
+            <a href="../controllers/download.php?unit_no=<?php echo urlencode($unit_no) ?>"><button class=" bg-blue-700 text-white px-6  flex flex-cols py-2 rounded-lg">
+              <svg class="ml-3 mr-2 w-6 h-6 text-gray-800 dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 18 18">
+  <path fill-rule="" d="M13 11.15V4a1 1 0 1 0-2 0v7.15L8.78 8.374a1 1 0 1 0-1.56 1.25l4 5a1 1 0 0 0 1.56 0l4-5a1 1 0 1 0-1.56-1.25L13 11.15Z" clip-rule=""/>
+  <path fill-rule="" d="M9.657 15.874 7.358 13H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2.358l-2.3 2.874a3 3 0 0 1-4.685 0ZM17 16a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z" clip-rule=""/>
+</svg> Download</button></a>
             <?php else: ?>
                 <p>QR code not available.</p>
             <?php endif; ?>
         </div>
     </div>
 </div>
+
+<!-- <div class="p-4" x-data="{ showAlert: true }" x-init="setTimeout(() => showAlert = false, 5000)">
+    <div
+      x-show="showAlert"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 transform scale-90"
+      x-transition:enter-end="opacity-100 transform scale-100"
+      x-transition:leave="transition ease-in duration-300"
+      x-transition:leave-start="opacity-100 transform scale-100"
+      x-transition:leave-end="opacity-0 transform scale-90"
+      class="bg-blue-500 text-white p-4 rounded-lg shadow-lg"
+    >
+      <p>This is an alert box that will disappear after 5 seconds.</p>
+    </div> -->
+    <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Table with Search and Pagination</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mx-auto p-4" x-data="tableComponent()">
+    <div class="mb-4">
+      <input
+        type="text"
+        class="border border-gray-300 p-2 rounded-lg w-full"
+        placeholder="Search..."
+        x-model="searchQuery"
+        @input="filterTable"
+      />
+    </div>
+
+    <table class="min-w-full bg-white">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 border-b">Name</th>
+          <th class="py-2 px-4 border-b">Email</th>
+          <th class="py-2 px-4 border-b">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template x-for="(row, index) in paginatedRows" :key="index">
+          <tr>
+            <td class="py-2 px-4 border-b" x-text="row.name"></td>
+            <td class="py-2 px-4 border-b" x-text="row.email"></td>
+            <td class="py-2 px-4 border-b" x-text="row.role"></td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+
+    <div class="flex justify-between mt-4">
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+        :disabled="currentPage === 1"
+        @click="prevPage"
+      >
+        Prev
+      </button>
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+        :disabled="currentPage === totalPages"
+        @click="nextPage"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function tableComponent() {
+      return {
+        searchQuery: '',
+        currentPage: 1,
+        rowsPerPage: 5,
+        rows: [
+          { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+          { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+          { name: 'Michael Brown', email: 'michael@example.com', role: 'Editor' },
+          { name: 'Sarah Johnson', email: 'sarah@example.com', role: 'Admin' },
+          { name: 'Chris Lee', email: 'chris@example.com', role: 'User' },
+          { name: 'Paul Walker', email: 'paul@example.com', role: 'Editor' },
+          { name: 'Laura Wilson', email: 'laura@example.com', role: 'User' },
+          { name: 'Kevin White', email: 'kevin@example.com', role: 'Admin' },
+          { name: 'Emma Davis', email: 'emma@example.com', role: 'User' },
+          { name: 'Olivia Martinez', email: 'olivia@example.com', role: 'Editor' },
+        ],
+        get filteredRows() {
+          return this.rows.filter(row => {
+            return (
+              row.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              row.email.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+              row.role.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+          });
+        },
+        get paginatedRows() {
+          const start = (this.currentPage - 1) * this.rowsPerPage;
+          const end = this.currentPage * this.rowsPerPage;
+          return this.filteredRows.slice(start, end);
+        },
+        get totalPages() {
+          return Math.ceil(this.filteredRows.length / this.rowsPerPage);
+        },
+        filterTable() {
+          this.currentPage = 1;
+        },
+        nextPage() {
+          if (this.currentPage < this.totalPages) {
+            this.currentPage++;
+          }
+        },
+        prevPage() {
+          if (this.currentPage > 1) {
+            this.currentPage--;
+          }
+        }
+      };
+    }
+  </script>
+</body>
+</html> -->
+
 
 
 <?php loadView('footer') ?>

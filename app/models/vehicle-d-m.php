@@ -94,8 +94,11 @@
             // generate the Qr code for the unit no
             $unit_no = $vehicle['vehicle_reg_no'];
 
+            // get url for dislay
+            $url  = 'http://localhost/VMS/public/?vehicle_registration_no=';
+
             ob_start();
-            QRcode::png($unit_no, null, QR_ECLEVEL_L, 3); // Ensuring proper size and error correction level
+            QRcode::png($url . $unit_no, null, QR_ECLEVEL_L, 3); // Ensuring proper size and error correction level
             $imageString = ob_get_contents();
             ob_end_clean();
 

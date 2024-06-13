@@ -21,10 +21,10 @@ include_once '../controllers/drivers-con.php';
   <div
     class="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11"
   >
-    <div class="flex items-center gap-2 sm:gap-4 lg:hidden">
+    <div class="flex items-center gap-2 sm:gap-4 ">
       <!-- Hamburger Toggle BTN -->
       <button
-        class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
+        class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark "
         @click.stop="sidebarToggle = !sidebarToggle"
       >
         <span class="relative block h-5.5 w-5.5 cursor-pointer">
@@ -55,11 +55,11 @@ include_once '../controllers/drivers-con.php';
         </span>
       </button>
       <!-- Hamburger Toggle BTN -->
-      <a class="block flex-shrink-0 lg:hidden" href="index.html">
-        <img src="src/images/logo/logo-icon.svg" alt="Logo" />
+      <a class="block flex-shrink-0 " href="index.html">
+        <!-- <img src="src/images/logo/logo-icon.svg" alt="Logo" /> -->
       </a>
     </div>
-    <div class="hidden sm:block">
+    <!-- <div class="hidden sm:block">
       <form action="https://formbold.com/s/unique_form_id" method="POST">
         <div class="relative">
           <button class="absolute left-0 top-1/2 -translate-y-1/2">
@@ -93,7 +93,7 @@ include_once '../controllers/drivers-con.php';
           />
         </div>
       </form>
-    </div>
+    </div> -->
 
     <div class="flex items-center gap-3 2xsm:gap-7">
       <ul class="flex items-center gap-2 2xsm:gap-4">
@@ -573,7 +573,7 @@ include_once '../controllers/drivers-con.php';
          <!-- ===== Main Content Start ===== -->
          <main>
           <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-            <div class="mx-auto max-w-242.5">
+            <div class="mx-auto ">
               <!-- Breadcrumb Start -->
               <div
                 class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
@@ -600,7 +600,7 @@ include_once '../controllers/drivers-con.php';
         
                 <!-- Main modal -->
                 <div x-show="open" @keydown.escape.window="open = false" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div @click.away="open = false" class="mt-19.6 ml-60 bg-white rounded-lg shadow dark:bg-black w-full max-w-md p-4 md:p-5 relative overflow-y-auto" style="max-height:86%;">
+    <div @click.away="open = false" class="mt-19.6 ml-55 bg-white rounded-lg shadow dark:bg-black w-full  p-4 md:p-5 relative overflow-y-auto" style="max-height:86%; width:46rem;">
         <!-- Modal header -->
         <div class="flex items-center justify-between border-b pb-4 md:pb-5 dark:border-gray-600">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -680,208 +680,120 @@ include_once '../controllers/drivers-con.php';
 </div>
 
             </div>
-            <!-- End of Button -->
-            <div class="p-6 sm:p-12 dark:bg-white-900 bg-white shadow-lg rounded-lg  hidden">
-              <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-                  <img src="https://source.unsplash.com/75x75/?portrait" alt="" class="self-center flex-shrink-0 w-24 h-24 border-4 border-gray-200 rounded-full md:mr-6">
-                  <div class="flex flex-col">
-                      <p class="text-lg font-semibold text-center md:text-left text-gray-900"><strong>Name:</strong> John Doe</p>
-                      <p class="text-lg font-semibold text-center md:text-left text-gray-900"><strong>Identity Card No:</strong> 1D123456</p>
-                      <p class="text-lg font-semibold text-center md:text-left text-gray-900"><strong>Phone Number:</strong> 555-1234</p>
-                      <p class="text-lg font-semibold text-center md:text-left text-gray-900"><strong>NIN:</strong> John Doe</p>
-                      <p class="text-lg font-semibold text-center md:text-left text-gray-900"><strong>Owner ID:</strong> John Doe</p>
-                  </div>
+
+            <!-- alert box -->
+            <div class="p-4" x-data="{ showAlert: true }" x-init="setTimeout(() => showAlert = false, 5000)">
+              <div
+                x-show="showAlert"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 transform scale-90"
+                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 transform scale-100"
+                x-transition:leave-end="opacity-0 transform scale-90"
+                class="bg-green-500 text-white p-4 rounded-lg shadow-lg"
+              >
+                <p>This is an alert box that will disappear after 5 seconds.</p>
               </div>
-              <div class="flex flex-row justify-center pt-4 space-x-4 align-center">
-                  qr  code
-              </div>
-          </div>
           
           
 <!-- Start of Table -->
 <div
   class="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1"
 >
-  <div class="max-w-full overflow-x-auto">
-    <table class="w-full table-auto">
-      <thead>
-        <tr class="bg-gray-2 text-left dark:bg-meta-4">
-          <th
-            class="min-w-[220px] px-4 py-4 font-medium text-black dark:text-white xl:pl-11"
-          >
-            ID
-          </th>
-          <th
-            class="min-w-[220px] px-4 py-4 font-medium text-black dark:text-white xl:pl-11"
-          >
-            Name
-          </th>
-          <th
-            class="min-w-[150px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Address
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Identity Card No
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Unit No
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            LGA
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Phone Number
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            NIN
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Vehicle Type
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Vehicle Reg No
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            LGA Code
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Owner ID
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Image
-          </th>
-          <th
-            class="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white"
-          >
-            Status
-          </th>
-          <th class="px-4 py-4 font-medium text-black dark:text-white">
-            Actions
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach($new as $vehicle) : ?>
-        <tr>
-          <td
-          class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11"
-        >
-          <h5 class="font-medium text-black dark:text-white"><?php echo htmlspecialchars($vehicle['id']) ?></h5>
-          <!-- <p class="text-sm"></p> -->
+<div class="container ml-4 px-4 py-8">
+    <!-- input search bar -->
+    <div class="flex justify-between items-center mb-4">
+      <input
+        type="text"
+        id="searchInput"
+        onkeyup="filterTable()"
+        placeholder="Search for names.."
+        class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <div class="table-container">
+  <table style="margin: 0 1rem 0 -2rem;" class="table-fixed divide-x divide-y divide-gray-200 dark:divide-gray-700">
+    <thead>
+      <tr class="bg-gray-200 text-left dark:bg-gray-800">
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">ID</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Name</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Address</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Identity Card No</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Unit No</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">LGA</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Phone Number</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">NIN</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Vehicle Type</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Vehicle Reg No</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">LGA Code</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Owner ID</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Image</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Status</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="text-sm bg-white divide-x divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
+      <?php foreach($new as $vehicle) : ?>
+      <tr>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['id']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['name']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['address']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['identity_card_no']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['unit_no']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['lga']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['phone_number']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['nin']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['vehicle_type']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['vehicle_registration_no']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['lga_code']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['owner_id']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap">
+          <img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Profile Image" class="w-10 h-10 profile-image">
         </td>
-          <td
-            class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11"
-          >
-            <h5 class="font-medium text-black dark:text-white"><?php echo htmlspecialchars($vehicle['name']) ?></h5>
-            <!-- <p class="text-sm"></p> -->
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['address']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['identity_card_no']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['unit_no']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['lga']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['phone_number']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['nin']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['vehicle_type']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['vehicle_registration_no']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['lga_code']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><?php echo htmlspecialchars($vehicle['owner_id']) ?></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p class="text-black dark:text-white"><img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Driver Image" class="w-32 h-32 object-cover rounded" width="100"></p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <p
-              class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success"
-            >
-              active 
-            </p>
-          </td>
-          <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-            <div class="flex items-center space-x-3.5" x-data="{showModal: false}">
-              <button class="hover:text-primary" @click="showModal = true">
-                <svg
-                  class="fill-current"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z"
-                    fill=""
-                  />
-                  <path
-                    d="M9 11.3906C7.67812 11.3906 6.60938 10.3219 6.60938 9C6.60938 7.67813 7.67812 6.60938 9 6.60938C10.3219 6.60938 11.3906 7.67813 11.3906 9C11.3906 10.3219 10.3219 11.3906 9 11.3906ZM9 7.875C8.38125 7.875 7.875 8.38125 7.875 9C7.875 9.61875 8.38125 10.125 9 10.125C9.61875 10.125 10.125 9.61875 10.125 9C10.125 8.38125 9.61875 7.875 9 7.875Z"
-                    fill=""
-                  />
+        <td class="border-r px-2 py-2 whitespace-nowrap">
+          <p class="  inline-flex rounded-full bg-success bg-opacity-10 px-3 text-sm font-small text-success">active</p>
+        </td>
+        <td class="border-r px-2 py-2 whitespace-nowrap">
+          <div class="flex items-center space-x-3.5" x-data="{ showModal: false, vehicleId: null }">
+          <button class="hover:text-primary" @click="showModal = true; vehicleId = <?php echo $vehicle['id']; ?>">
+                <!-- SVG for view -->
+                <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z" fill=""/>
+                  <path d="M9 11.3906C7.67812 11.3906 6.60938 10.3219 6.60938 9C6.60938 7.67813 7.67812 6.60938 9 6.60938C10.3219 6.60938 11.3906 7.67813 11.3906 9C11.3906 10.3219 10.3219 11.3906 9 11.3906ZM9 7.875C8.38125 7.875 7.875 8.38125 7.875 9C7.875 9.61875 8.38125 10.125 9 10.125C9.61875 10.125 10.125 9.61875 10.125 9C10.125 8.38125 9.61875 7.875 9 7.875Z" fill=""/>
                 </svg>
               </button>
-              <!-- modal -->
-              <div x-show="showModal" @keydown.escape.window="showModal = false"  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"  x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-                  <!-- Modal Container -->
-                <div @click.away="showModal = false" style="height: 21rem; width: 34rem;" class="bg-white dark:bg-black items-center justify-center ml-60 flex flex-col items-center justify-center" x-show="showModal" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
-                    <!-- QR Code Section -->
-                    <div class="bg-white rounded-lg shadow-lg p-6 w-96">
-                        <img src="src/images/qr_code/qr-code.png" alt="QR code" class="h-40 w-40" style="height: 8rem; width: 8rem;">
+            <!-- Modal -->
+            <div x-show="showModal" @keydown.escape.window="showModal = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <!-- Modal Container -->
+              <div @click.away="showModal = false" style="height: 21rem; width: 34rem;" class="bg-white dark:bg-black relative items-center justify-center flex flex-col items-center justify-center" x-show="showModal" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+                <!-- Close Icon -->
+                <button @click="showModal = false" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <!-- QR Code Section -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                  <template x-if="vehicleId">
+                    <?php foreach($new as $vehicle) : ?>
+                    <div x-show="vehicleId === <?php echo $vehicle['id']; ?>">
+                      <img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Driver Image" class="h-40 w-40 rounded-full" style="height: 8rem; width: 8rem;">
                     </div>
-                    <!-- Event and Name Details -->
-                    <!-- <div class="text-center">
-                        <p class="text-lg font-semibold mb-2">Event</p>
-                        <p class="text-gray-700 mb-4">Sample 101</p>
-                        <p class="text-lg font-semibold mb-2">Name</p>
-                        <p class="text-gray-700">Claire Blake</p>
-                    </div> -->
-                    <!-- Button -->
-                    <div class="flex justify-center mt-6">
-                        <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-                            Vehicle Information
-                        </button>
-                    </div>
+                    <?php endforeach; ?>
+                  </template>
                 </div>
+              </div>
             </div>
-              <!-- end modal -->
-              <button class="hover:text-primary">
+            <!-- modal end -->
+            <button class="hover:text-secondary">
+            <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
+            </svg>
+            </button>
+
+            <button class="hover:text-danger">
                 <svg
                   class="fill-current"
                   width="18"
@@ -908,32 +820,15 @@ include_once '../controllers/drivers-con.php';
                   />
                 </svg>
               </button>
-              <button class="hover:text-primary">
-                <svg
-                  class="fill-current"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.8754 11.6719C16.5379 11.6719 16.2285 11.9531 16.2285 12.3187V14.8219C16.2285 15.075 16.0316 15.2719 15.7785 15.2719H2.22227C1.96914 15.2719 1.77227 15.075 1.77227 14.8219V12.3187C1.77227 11.9812 1.49102 11.6719 1.12539 11.6719C0.759766 11.6719 0.478516 11.9531 0.478516 12.3187V14.8219C0.478516 15.7781 1.23789 16.5375 2.19414 16.5375H15.7785C16.7348 16.5375 17.4941 15.7781 17.4941 14.8219V12.3187C17.5223 11.9531 17.2129 11.6719 16.8754 11.6719Z"
-                    fill=""
-                  />
-                  <path
-                    d="M8.55074 12.3469C8.66324 12.4594 8.83199 12.5156 9.00074 12.5156C9.16949 12.5156 9.31012 12.4594 9.45074 12.3469L13.4726 8.43752C13.7257 8.1844 13.7257 7.79065 13.5007 7.53752C13.2476 7.2844 12.8539 7.2844 12.6007 7.5094L9.64762 10.4063V2.1094C9.64762 1.7719 9.36637 1.46252 9.00074 1.46252C8.66324 1.46252 8.35387 1.74377 8.35387 2.1094V10.4063L5.40074 7.53752C5.14762 7.2844 4.75387 7.31252 4.50074 7.53752C4.24762 7.79065 4.27574 8.1844 4.50074 8.43752L8.55074 12.3469Z"
-                    fill=""
-                  />
-                </svg>
-              </button>
-            </div>
-          </td>
-        </tr>
-          <?php endforeach; ?>
-
-      </tbody>
-    </table>
-  </div>
+          </div>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 </div>
+
+
+</div>
+
 <?php loadView('footer') ?>

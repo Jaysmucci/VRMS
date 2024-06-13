@@ -21,11 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     // fetch user data with the email and password provided
     $condition = ['email' => $email, 'password' => $password];
     $result =  $db->select('qr_controllers', $condition, 'user_name, email, password, role');
-    var_dump($result);
+    // var_dump($result);
 
 
 
-    if ($result && password_verify($password, $result[0]['password'])) {
+    if ($result) {      // && password_verify($password, $result[0]['password'])
         session_start();
         // Assuming result is a single row, get the first item
         $user = $result[0];

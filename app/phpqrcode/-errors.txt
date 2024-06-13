@@ -1,0 +1,200 @@
+2024-06-10 13:38:16: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:38:59: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:39:26: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:41:06: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:44:58: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:46:39: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:50:00: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:50:31: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:52:09: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:52:40: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:53:03: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+2024-06-10 13:55:48: <br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>71</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>53</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on value of type int in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />
+<br />
+<b>Deprecated</b>:  ord(): Passing null to parameter #1 ($character) of type string is deprecated in <b>C:\laragon\www\VMS\app\phpqrcode\qrsplit.php</b> on line <b>62</b><br />

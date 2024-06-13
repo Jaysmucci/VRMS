@@ -493,7 +493,7 @@ loadView("navbar");
                 </defs>
               </svg>
 
-              UI Elements
+              Logs
 
               <svg
                 class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
@@ -522,18 +522,18 @@ loadView("navbar");
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="alerts.html"
+                    href="user_location"
                     :class="page === 'alerts' && '!text-white'"
-                    >Alerts</a
+                    >User Location</a
                   >
                 </li>
 
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="buttons.html"
+                    href="vehicle_logs"
                     :class="page === 'buttons' && '!text-white'"
-                    >Buttons</a
+                    >Vehicle Logs</a
                   >
                 </li>
               </ul>
@@ -580,7 +580,7 @@ loadView("navbar");
                 </defs>
               </svg>
 
-              Authentication
+              Reports
 
               <svg
                 class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
@@ -609,17 +609,17 @@ loadView("navbar");
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="signin.html"
+                    href="bookings"
                     :class="page === 'signin' && '!text-white'"
-                    >Sign In</a
+                    >Bookings</a
                   >
                 </li>
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="signup.html"
+                    href="Fuel"
                     :class="page === 'signup' && '!text-white'"
-                    >Sign Up</a
+                    >Fuel</a
                   >
                 </li>
               </ul>

@@ -18,10 +18,10 @@ loadView('sidebar');
   <div
     class="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11"
   >
-    <div class="flex items-center gap-2 sm:gap-4 lg:hidden">
+    <div class="flex items-center gap-2 sm:gap-4 ">
       <!-- Hamburger Toggle BTN -->
       <button
-        class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
+        class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark "
         @click.stop="sidebarToggle = !sidebarToggle"
       >
         <span class="relative block h-5.5 w-5.5 cursor-pointer">
@@ -52,11 +52,11 @@ loadView('sidebar');
         </span>
       </button>
       <!-- Hamburger Toggle BTN -->
-      <a class="block flex-shrink-0 lg:hidden" href="index.html">
-        <img src="src/images/logo/logo-icon.svg" alt="Logo" />
+      <a class="block flex-shrink-0 " href="home">
+        <!-- <img src="src/images/logo/qr_logo.png alt="Logo" /> -->
       </a>
     </div>
-    <div class="hidden sm:block">
+    <!-- <div class=" sm:block">
       <form action="https://formbold.com/s/unique_form_id" method="POST">
         <div class="relative">
           <button class="absolute left-0 top-1/2 -translate-y-1/2">
@@ -90,7 +90,7 @@ loadView('sidebar');
           />
         </div>
       </form>
-    </div>
+    </div> -->
 
     <div class="flex items-center gap-3 2xsm:gap-7">
       <ul class="flex items-center gap-2 2xsm:gap-4">
@@ -570,7 +570,7 @@ loadView('sidebar');
          <!-- ===== Main Content Start ===== -->
          <main>
           <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-            <div class="mx-auto max-w-242.5">
+            <div class="mx-auto ">
               <!-- Breadcrumb Start -->
               <div
                 class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
