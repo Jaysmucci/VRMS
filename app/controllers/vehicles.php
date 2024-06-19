@@ -1,13 +1,13 @@
 <?php
 require dirname(__DIR__) . './../helpers.php';
 loadDB('db');
-loadModel('pub-user-m');
+loadModel('vehicles');
 
 
 // instantiate class Database
 $database = new Database();
 $db = $database->connect();
 
-// instantiate class puUsers
-$pubUser = new pubUsers($database);
-$new  = $pubUser->read('user');
+// instantiate class vehicles
+$vehicle = new vehicles($database);
+$vType = $vehicle->car();

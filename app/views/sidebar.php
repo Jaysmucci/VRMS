@@ -91,6 +91,55 @@ loadView("navbar");
           </li>
           <!-- Menu Item Dashboard -->
 
+          <!-- Menu Item Dashboard -->
+          <li>
+            <a
+              class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
+              href="#"
+              @click.prevent="selected = (selected === 'REGISTER' ? '':'REGISTER')"
+              :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'REGISTER') || (page === 'ecommerce' || page === 'analytics' || page === 'stocks') }"
+            >
+            <svg class="svg-icon" style="width: 2rem;height: 3rem;vertical-align: middle;fill: currentColor;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M810.666667 298.666667H532.714667a42.666667 42.666667 0 1 0 0 85.333333H810.666667a42.666667 42.666667 0 1 0 0-85.333333z m-149.525334 128h-128.426666a42.666667 42.666667 0 1 0 0 85.333333h128.426666a42.666667 42.666667 0 1 0 0-85.333333zM423.125333 657.216A42.666667 42.666667 0 0 0 447.445333 618.666667V320a42.666667 42.666667 0 0 0-42.666666-42.666667H352.64a42.666667 42.666667 0 0 0-36.288 20.245334l-29.866667 48.362666-91.797333 44.672A42.666667 42.666667 0 0 0 170.666667 428.970667V618.666667a42.666667 42.666667 0 0 0 42.666666 42.666666h2.048a106.538667 106.538667 0 0 1 104.32-85.333333 106.538667 106.538667 0 0 1 103.424 81.216zM575.125333 554.666667h-42.410666a42.666667 42.666667 0 1 0 0 85.333333h42.410666a42.666667 42.666667 0 1 0 0-85.333333z m-255.424 192a63.936 63.936 0 0 0 63.893334-64c0-35.349333-28.586667-64-63.893334-64a63.936 63.936 0 0 0-63.872 64c0 35.349333 28.586667 64 63.872 64z m510.506667-319.210667a42.581333 42.581333 0 0 0-58.154667 15.594667l-106.709333 184.832 73.749333 42.581333 106.709334-184.832a42.581333 42.581333 0 0 0-15.573334-58.176zM646.336 742.4l68.864-34.133333-73.749333-42.581334 4.864 76.714667z" fill="" /></svg>
+              Vehicle Registration
+
+              <svg
+                class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
+                :class="{ 'rotate-180': (selected === 'REGISTER') }"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.41107 6.9107C4.73651 6.58527 5.26414 6.58527 5.58958 6.9107L10.0003 11.3214L14.4111 6.91071C14.7365 6.58527 15.2641 6.58527 15.5896 6.91071C15.915 7.23614 15.915 7.76378 15.5896 8.08922L10.5896 13.0892C10.2641 13.4147 9.73651 13.4147 9.41107 13.0892L4.41107 8.08922C4.08563 7.76378 4.08563 7.23614 4.41107 6.9107Z"
+                  fill=""
+                />
+              </svg>
+            </a>
+
+            <!-- Dropdown Menu Start -->
+            <div
+              class="translate transform overflow-hidden"
+              :class="(selected === 'REGISTER') ? 'block' :'hidden'"
+            >
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="register"
+                    :class="page === 'ecommerce' && '!text-white'"
+                    >New Vehicle
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Dropdown Menu End -->
+          </li>
+          <!-- Menu Item Dashboard -->
+
           <!-- Menu Item Calendar -->
           <li>
             <a
@@ -114,7 +163,7 @@ loadView("navbar");
             <path d="M3 18.5C2.80189 18.4974 2.61263 18.4176 2.47253 18.2775C2.33244 18.1374 2.25259 17.9481 2.25 17.75C2.25 15.05 2.97 13.25 6.5 13.25C6.69891 13.25 6.88968 13.329 7.03033 13.4697C7.17098 13.6103 7.25 13.8011 7.25 14C7.25 14.1989 7.17098 14.3897 7.03033 14.5303C6.88968 14.671 6.69891 14.75 6.5 14.75C4.15 14.75 3.75 15.5 3.75 17.75C3.74741 17.9481 3.66756 18.1374 3.52747 18.2775C3.38737 18.4176 3.19811 18.4974 3 18.5Z" fill=""/>
             </svg>
 
-              USER MANAGEMENT
+              User Management
 
               <svg
                 class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
@@ -154,44 +203,28 @@ loadView("navbar");
                       :class="page === 'owners' && '!text-white'"
                       >owners
                     </a>
-                    <li>
+                </li>
+                <li>
                       <a
                         class="uppercase group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                         href="pub-users"
                         :class="page === 'pub-users' && '!text-white'"
-                        >Pub Users
+                        >Users
                       </a>
                   </li>
-                </li>
+                  <li>
+                      <a
+                        class="uppercase group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                        href="vehicles"
+                        :class="page === 'vehicles' && '!text-white'"
+                        >Vehicles
+                      </a>
+                  </li>
               </ul>
             </div>
             <!-- Dropdown Menu End -->
           </li>
-          <!-- <li>
-            <a
-              class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-              href="calendar.html"
-              @click="selected = (selected === 'Calendar' ? '':'Calendar')"
-              :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Calendar') && (page === 'calendar') }"
-            >
-              <svg
-                class="fill-current"
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.7499 2.9812H14.2874V2.36245C14.2874 2.02495 14.0062 1.71558 13.6405 1.71558C13.2749 1.71558 12.9937 1.99683 12.9937 2.36245V2.9812H4.97803V2.36245C4.97803 2.02495 4.69678 1.71558 4.33115 1.71558C3.96553 1.71558 3.68428 1.99683 3.68428 2.36245V2.9812H2.2499C1.29365 2.9812 0.478027 3.7687 0.478027 4.75308V14.5406C0.478027 15.4968 1.26553 16.3125 2.2499 16.3125H15.7499C16.7062 16.3125 17.5218 15.525 17.5218 14.5406V4.72495C17.5218 3.7687 16.7062 2.9812 15.7499 2.9812ZM1.77178 8.21245H4.1624V10.9968H1.77178V8.21245ZM5.42803 8.21245H8.38115V10.9968H5.42803V8.21245ZM8.38115 12.2625V15.0187H5.42803V12.2625H8.38115ZM9.64678 12.2625H12.5999V15.0187H9.64678V12.2625ZM9.64678 10.9968V8.21245H12.5999V10.9968H9.64678ZM13.8374 8.21245H16.228V10.9968H13.8374V8.21245ZM2.2499 4.24683H3.7124V4.83745C3.7124 5.17495 3.99365 5.48433 4.35928 5.48433C4.7249 5.48433 5.00615 5.20308 5.00615 4.83745V4.24683H13.0499V4.83745C13.0499 5.17495 13.3312 5.48433 13.6968 5.48433C14.0624 5.48433 14.3437 5.20308 14.3437 4.83745V4.24683H15.7499C16.0312 4.24683 16.2562 4.47183 16.2562 4.75308V6.94683H1.77178V4.75308C1.77178 4.47183 1.96865 4.24683 2.2499 4.24683ZM1.77178 14.5125V12.2343H4.1624V14.9906H2.2499C1.96865 15.0187 1.77178 14.7937 1.77178 14.5125ZM15.7499 15.0187H13.8374V12.2625H16.228V14.5406C16.2562 14.7937 16.0312 15.0187 15.7499 15.0187Z"
-                  fill=""
-                />
-              </svg>
 
-              User Mangement
-            </a>
-          </li> -->
-          <!-- Menu Item Calendar -->
 
           <!-- Menu Item Profile -->
           <li>

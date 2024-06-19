@@ -2,7 +2,7 @@
 
 class pubUsers{
     private $db;
-    private $table_name = 'qr_pub_users';
+    private $table_name = 'users';
 
     public function __construct(Database $db)
     {
@@ -10,10 +10,10 @@ class pubUsers{
     }
 
         // function to read data 
-        public function read(){
+        public function read($user_id){
             // prepare the SQL records to select all query from table
-            $result = $this->db->select($this->table_name);
-            
+            $condition = ['role' => $user_id];
+            $result = $this->db->select('users', $condition, 'id, name, email, role, image, createdAt');
             // check if any record where returned
             if ($result && count($result) > 0) {
                 return $result;  // return all record as an associative array

@@ -1,13 +1,12 @@
 <?php 
 session_start();
-include_once '../controllers/owners-con.php';
+include_once '../controllers/vehicles.php';
 loadView('sidebar');
 ?>
       <!-- ===== Content Area Start ===== -->
       <div
         class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
       >
-
          <!-- ===== Main Content Start ===== -->
          <main>
           <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
@@ -17,15 +16,15 @@ loadView('sidebar');
                 class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
               >
                 <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                  Owners
+                  Vehicles
                 </h2>
 
                 <nav>
                   <ol class="flex items-center gap-2">
                     <li>
-                      <a class="font-medium" href="index.html">Dashboard /</a>
+                      <a class="font-medium" href="home">Dashboard /</a>
                     </li>
-                    <li class="text-primary">Owner</li>
+                    <li class="text-primary">Vehicle</li>
                   </ol>
                 </nav>
               </div>
@@ -106,27 +105,27 @@ loadView('sidebar');
     <thead>
       <tr class="bg-gray-200 text-left dark:bg-gray-800">
         <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">ID</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Name</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Address</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Occupation</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Phone Number</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">NIN</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Image</th>
-        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Status</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Owner NIN</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Driver NIN</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Vehicle Type</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Vehicle Reg no</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Lga</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Lga Code</th>
+        <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Vehicle Image</th>
         <th class="text-sm px-2 py-2 font-medium text-black dark:text-white">Actions</th>
       </tr>
     </thead>
     <tbody id="tableBody" class="text-center text-sm bg-white divide-x divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
-      <?php foreach($new as $vehicle) : ?>
+      <?php foreach($vType as $vehicle) : ?>
       <tr>
         <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['id']) ?></td>
-        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['name']) ?></td>
-        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['address']) ?></td>
-        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['occupation']) ?></td>
-        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['phone_number']) ?></td>
-        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['nin']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['owner_nin']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['driver_nin']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['vehicle_type']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['lga']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['lga_code']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap">
-          <img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Profile Image" class="w-10 h-10 profile-image">
+          <img src="../controllers/<?php echo htmlspecialchars($vehicle['vehicle_image']) ?>" alt="Profile Image" class="w-10 h-10 profile-image">
         </td>
         <td class="border-r px-2 py-2 whitespace-nowrap">
           <p class="  inline-flex rounded-full bg-success bg-opacity-10 px-3 text-sm font-small text-success">active</p>

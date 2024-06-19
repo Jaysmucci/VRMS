@@ -40,6 +40,7 @@ image, text, .jvm-zoomin, .jvm-zoomout {
   color: #FFF;
 }
 
+
 .jvm-tooltip.active {
   display: block;
 }
