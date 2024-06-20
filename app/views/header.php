@@ -79,7 +79,7 @@
       </button>
       <!-- Hamburger Toggle BTN -->
       <a class="block flex-shrink-0 " href="index.html">
-        <img src="src/images/logo/" alt="Logo" />
+        <!-- <img src="src/images/logo/logo1.svg" alt="Logo" /> -->
       </a>
     </div>
 

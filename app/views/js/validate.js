@@ -68,3 +68,5 @@ function changeRowsPerPage() {
 
   // Initial call to setup the pagination
   paginateTable();
+
+  

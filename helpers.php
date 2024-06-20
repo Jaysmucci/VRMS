@@ -112,3 +112,13 @@ function formatNum($name){
     return number_format($name / 1000000000, 1) . 'B';
   }
 }
+
+/**
+ * @param string $data
+ * @return mixed
+ */
+function jsonResponse($data) {
+  // header('Content-Type: application/json');
+  echo json_encode($data);
+  // exit(); // Make sure to exit to prevent further execution
+}
