@@ -29,7 +29,7 @@ class Count{
     public function rider(){
         $table_driver = 'riders';
 
-        $result = $this->db->select($table_driver, [] , 'id');
+        $result = $this->db->select($table_driver, [] , 'driver_id');
 
         // check if any record where returned
         if ($result && count($result) > 0) {
@@ -44,7 +44,7 @@ class Count{
     public function owner(){
         $table_owner = 'owners';
         
-        $result = $this->db->select($table_owner, [] , 'id');
+        $result = $this->db->select($table_owner, [] , 'owner_id');
 
         // check if any record where returned
         if ($result && count($result) > 0) {
@@ -59,7 +59,7 @@ class Count{
     public function vehicle(){
     $table_vehicle = 'vehicles';
 
-    $result = $this->db->select($table_vehicle, [], 'id');
+    $result = $this->db->select($table_vehicle, [], 'vehicle_id');
 
     // check if any record where returned
     if ($result && count($result) > 0) {

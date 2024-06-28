@@ -3,7 +3,7 @@
   <div class="flex h-screen overflow-hidden">
       <!-- ===== Sidebar Start ===== -->
       <aside
-  :class="sidebarToggle ? 'translate-x-0' : '-translate-x-full'"
+  :class="sidebarToggle ? 'translate-x-0' : '-translate-x-full'" style="position: fixed;"
   class="absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark  "  
   @click.outside="sidebarToggle = false"
   

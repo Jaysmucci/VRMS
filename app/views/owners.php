@@ -119,21 +119,21 @@ loadView('sidebar');
     <tbody id="tableBody" class="text-center text-sm bg-white divide-x divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
       <?php foreach($new as $vehicle) : ?>
       <tr>
-        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['id']) ?></td>
+        <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['owner_id']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['name']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['address']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['occupation']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['phone_number']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap"><?php echo htmlspecialchars($vehicle['nin']) ?></td>
         <td class="border-r px-2 py-2 whitespace-nowrap">
-          <img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Profile Image" class="w-10 h-10 profile-image">
+          <img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Profile Image" class="ml-9 w-10 h-10 profile-image">
         </td>
         <td class="border-r px-2 py-2 whitespace-nowrap">
           <p class="  inline-flex rounded-full bg-success bg-opacity-10 px-3 text-sm font-small text-success">active</p>
         </td>
         <td class="border-r px-2 py-2 whitespace-nowrap">
           <div class="flex items-center space-x-3.5" x-data="{ showModal: false, vehicleId: null }">
-          <button class="hover:text-primary" @click="showModal = true; vehicleId = <?php echo $vehicle['id']; ?>">
+          <button class="hover:text-primary" @click="showModal = true; vehicleId = <?php echo $vehicle['owner_id']; ?>">
                 <!-- SVG for view -->
                 <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.99981 14.8219C3.43106 14.8219 0.674805 9.50624 0.562305 9.28124C0.47793 9.11249 0.47793 8.88749 0.562305 8.71874C0.674805 8.49374 3.43106 3.20624 8.99981 3.20624C14.5686 3.20624 17.3248 8.49374 17.4373 8.71874C17.5217 8.88749 17.5217 9.11249 17.4373 9.28124C17.3248 9.50624 14.5686 14.8219 8.99981 14.8219ZM1.85605 8.99999C2.4748 10.0406 4.89356 13.5562 8.99981 13.5562C13.1061 13.5562 15.5248 10.0406 16.1436 8.99999C15.5248 7.95936 13.1061 4.44374 8.99981 4.44374C4.89356 4.44374 2.4748 7.95936 1.85605 8.99999Z" fill=""/>
@@ -154,7 +154,7 @@ loadView('sidebar');
                 <div class="bg-white rounded-lg shadow-lg p-6">
                   <template x-if="vehicleId">
                     <?php foreach($new as $vehicle) : ?>
-                    <div x-show="vehicleId === <?php echo $vehicle['id']; ?>">
+                    <div x-show="vehicleId === <?php echo $vehicle['owner_id']; ?>">
                       <img src="../controllers/<?php echo htmlspecialchars($vehicle['image']) ?>" alt="Driver Image" class="h-40 w-40 rounded-full" style="height: 8rem; width: 8rem;">
                     </div>
                     <?php endforeach; ?>

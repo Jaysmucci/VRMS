@@ -2,7 +2,7 @@
 
 class VehicleProfile{
     protected $db;
-    protected $table_name = 'riders';
+    protected $table_name = 'vehicles';
 
     public function __construct(Database $db){
         $this->db = $db;

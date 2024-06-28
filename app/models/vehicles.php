@@ -24,4 +24,19 @@ class vehicles{
             return [];
         }
     }
+
+    // function to create data
+    public function create($data){
+        return $this->db->insert($this->table_name, $data);
+    }
+
+    // function to upadate data
+    public function update($data, $conditions){
+        return $this->db->update($this->table_name, $data, $conditions);
+    }
+
+    // function to delete data
+    public function delete($conditions){
+        return $this->db->delete($this->table_name, $conditions);
+    }
 }

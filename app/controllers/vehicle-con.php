@@ -4,8 +4,7 @@ loadDB('db');
 loadModel('vehicle-m');
 
 // instantiate database
-$database  = new Database();
-$db = $database->connect();
+$database  = Database::getInstance();
 
 // instantiate class vehicleProfile
 // $pubUser = new VehicleProfile($database);
@@ -13,7 +12,7 @@ $db = $database->connect();
 
 
 // $conditon = [ 'id' => 13];
-$data = $database->select('riders');
+$data = $database->select('vehicles');
 
 
 

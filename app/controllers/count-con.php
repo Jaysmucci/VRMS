@@ -4,8 +4,7 @@ loadDB('db'); // Assuming this function loads your database configuration
 loadModel('count-m'); // Assuming this function loads your Count class
 
 // Assuming your Database and Count classes are already defined and included/autoloaded
-$database = new Database(); // Instantiate your Database class
-$connect = $database->connect(); // Instantiate method connect
+$database = Database::getInstance(); // Instantiate your Database class
 $counting = new Count($database); // Instantiate your Count class
 
 // Fetch all data
@@ -22,5 +21,5 @@ $data = [
     'vehicles' => $vehicles
 ];
 
-jsonResponse($data);
+// jsonResponse($data);
 ?>

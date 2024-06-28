@@ -49,12 +49,12 @@ loadView('sidebar');
         <?php foreach($data as $logs) : ?>
         <div class="bg-gray-300 rounded-lg ">
             <div class="leaderboard-item flex  p-4 border-b border-gray-700" onclick="viewUserDetails('SG', 870647)">
-                <img src="../controllers/<?php echo $logs['image'] ?>" alt="SG" class="w-12 h-12 rounded-full">
+                <img src="../controllers/<?php echo $logs['vehicle_image'] ?>" alt="SG" class="w-12 h-12 rounded-full">
                 <div class="ml-4 flex-1">
-                    <div class="text-xl font-semibold"><?php echo $logs['name'] ?></div>
+                    <div class="text-xl font-semibold"><?php echo $logs['vehicle_type'] ?></div>
                     <div class="text-yellow-400"><?php echo $logs['vehicle_registration_no'] ?></div>
                 </div>
-                <div class="text-gray-500"><button class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="vehicle-details?id=<?php echo $logs['id'] ?>">view</a></button></div>
+                <div class="text-gray-500"><button class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="vehicle-details?vehicle_id=<?php echo $logs['vehicle_id'] ?>">view</a></button></div>
             </div>
         </div>
         <?php endforeach; ?>

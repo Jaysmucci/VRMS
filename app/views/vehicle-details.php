@@ -52,31 +52,33 @@ loadView('sidebar');
         <!-- Driver Section -->
         <div class="bg-white rounded-lg shadow-lg col-span-2 p-4">
             <div class="flex items-center mb-8">
-                <img src="../controllers/<?php echo htmlspecialchars($details['image']); ?>" alt="Driver" class="w-24 h-24 rounded-lg border border-gray-300">
+              <?php if($combined_details) : ?>
+                <img src="../controllers/<?php echo htmlspecialchars($combined_details['driver_image']); ?>" alt="Driver" class="w-24 h-24 rounded-lg border border-gray-300">
                 <div class="ml-4">
-                    <h2 class="text-xl font-semibold"><b>Name:</b> <?php echo htmlspecialchars($details['name']); ?></h2>
-                    <h2 class="text-xl font-semibold"><b>Phone Number:</b> <?php echo htmlspecialchars($details['phone_number']); ?></h2>
+                    <h2 class="text-xl font-semibold"><b>Name:</b> <?php echo htmlspecialchars($combined_details['driver_name']); ?></h2>
+                    <h2 class="text-xl font-semibold"><b>Phone Number:</b> <?php echo htmlspecialchars($combined_details['driver_phone']); ?></h2>
                 </div>
+              <?php endif;  ?>
             </div>
 
             <div class="flex items-center mb-8">
-              <?php if($combined) : ?>
-                <img src="../controllers/<?php echo htmlspecialchars($details['image']); ?>" alt="Owner" class="w-24 h-24 rounded-lg border border-gray-300">
+              <?php if($combined_details) : ?>
+                <img src="../controllers/<?php echo htmlspecialchars($combined_details['owner_image']); ?>" alt="Owner" class="w-24 h-24 rounded-lg border border-gray-300">
                 <div class="ml-4">
-                    <h2 class="text-xl font-semibold"><b>Owner Name:</b> <?php echo htmlspecialchars($combined['owner_name']); ?></h2>
-                    <h2 class="text-xl font-semibold"><b>Owner Phone Number:</b> <?php echo htmlspecialchars($combined['owner_phone']); ?></h2>
+                    <h2 class="text-xl font-semibold"><b>Owner Name:</b> <?php echo htmlspecialchars($combined_details['owner_name']); ?></h2>
+                    <h2 class="text-xl font-semibold"><b>Owner Phone Number:</b> <?php echo htmlspecialchars($combined_details['owner_phone']); ?></h2>
                 </div>
                 <?php endif; ?>
             </div>
 
             <div class="mb-8">
                 <h2 class="text-xl font-semibold mb-4"><b>Vehicle Information</b></h2>
-                <?php if ($combined): ?>
-                    <p><b>Registration Number:</b> <?php echo htmlspecialchars($combined['vehicle_reg_no']); ?></p>
-                    <p><b>LGA:</b> <?php echo htmlspecialchars($combined['lga']); ?></p>
-                    <p><b>LGA Code:</b> <?php echo htmlspecialchars($combined['lga_code']); ?></p>
-                    <p><b>Vehicle Type:</b> <?php echo htmlspecialchars($combined['vehicle_type']); ?></p>
-                    <p><b>Unit No:</b> <?php echo htmlspecialchars($combined['unit_no']); ?></p>
+                <?php if ($combined_details): ?>
+                    <p><b>Registration Number:</b> <?php echo htmlspecialchars($combined_details['vehicle_reg_no']); ?></p>
+                    <p><b>LGA:</b> <?php echo htmlspecialchars($combined_details['lga']); ?></p>
+                    <p><b>LGA Code:</b> <?php echo htmlspecialchars($combined_details['lga_code']); ?></p>
+                    <p><b>Vehicle Type:</b> <?php echo htmlspecialchars($combined_details['vehicle_type']); ?></p>
+                    <p><b>Unit No:</b> <?php echo htmlspecialchars($combined_details['unit_no']); ?></p>
                 <?php else: ?>
                     <p>No vehicle details found for the provided vehicle ID.</p>
                 <?php endif; ?>
@@ -85,9 +87,9 @@ loadView('sidebar');
         
         <!-- QR Code Section -->
         <div class="bg-white rounded-lg shadow-lg h-80 items-center justify-center p-4 grid grid-rows-2 gap-4">
-          <?php if($qr && $qr !== 'No unit number') : ?>
-            <img src="<?php echo htmlspecialchars($qr); ?>" alt="QR Code" class="bg-white w-40 h-40  border border-gray-300 mt-8">
-            <a href="../controllers/download.php?unit_no=<?php echo urlencode($unit_no) ?>"><button class=" bg-blue-700 text-white px-6  flex flex-cols py-2 rounded-lg">
+          <?php if($qr_code && $qr_code !== 'No unit number') : ?>
+            <img src="<?php echo htmlspecialchars($qr_code); ?>" alt="QR Code" class="bg-white w-40 h-40  border border-gray-300 mt-8">
+            <a href="../controllers/download.php?vehicle_id=<?php echo urlencode($vid) ?>"><button class=" bg-blue-700 text-white px-6  flex flex-cols py-2 rounded-lg">
               <svg class="ml-3 mr-2 w-6 h-6 text-gray-800 dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 18 18">
   <path fill-rule="" d="M13 11.15V4a1 1 0 1 0-2 0v7.15L8.78 8.374a1 1 0 1 0-1.56 1.25l4 5a1 1 0 0 0 1.56 0l4-5a1 1 0 1 0-1.56-1.25L13 11.15Z" clip-rule=""/>
   <path fill-rule="" d="M9.657 15.874 7.358 13H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2.358l-2.3 2.874a3 3 0 0 1-4.685 0ZM17 16a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z" clip-rule=""/>

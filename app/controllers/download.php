@@ -7,15 +7,16 @@
 
 
     // instantiate database
-    $database = new Database();
-    $db = $database->connect();
+    $database = Database::getInstance();
     $qc = new vehicleDetails($database);
 
     
-    $un = $_GET['unit_no'];
+    $vid = isset($_GET['vehicle_id']) ? $_GET['vehicle_id'] : 0;
+
+    $url = 'http://localhost/VMS/public/?vehicle_id=';
 
     ob_start();
-    QRcode::png($un, null, QR_ECLEVEL_L, 3);
+    QRcode::png($url . $vid, null, QR_ECLEVEL_L, 3);
     $imageStg  = ob_get_contents();
     ob_get_clean();;
 

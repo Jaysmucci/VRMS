@@ -5,8 +5,7 @@ loadModel('vehicles');
 
 
 // instantiate class Database
-$database = new Database();
-$db = $database->connect();
+$database = Database::getInstance();
 
 // instantiate class vehicles
 $vehicle = new vehicles($database);

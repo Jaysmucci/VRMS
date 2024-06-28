@@ -5,8 +5,7 @@ loadModel('pub-user-m');
 
 
 // instantiate class Database
-$database = new Database();
-$db = $database->connect();
+$database = Database::getInstance();
 
 // instantiate class puUsers
 $pubUser = new pubUsers($database);

@@ -4,8 +4,7 @@ loadDB('db');
 loadModel('owners-m');
 
 // instantiate database
-$database = new Database();
-$db = $database->connect();
+$database = Database::getInstance();
 
 // create a new Owner instance using Database instance
 $own = new Owners($database);
@@ -19,39 +18,5 @@ if ($new === false) {
     // Data fetched successfully
 }
 
-// inserting owners data to the database
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $occupation = $_POST['occupation'];
-    $pNumber = $_POST['phone_number'];
-    $nin = $_POST['nin'];
-    $vehicleType = $_POST['vehicle_type'];
-    $vehicleRegNo = $_POST['vehicle_registration_no'];
-    $driverID = $_POST['driver_id'];
-    $image = $_POST['image'];
-
-
-    // Creating a new driver
-$newOwnerData = [
-    'name' => $name,
-    'address' => $address,
-    'occupation' => $occupation,
-    'phone_number' => $pNumber,
-    'nin' => $nin,
-    'vehicle_type' => $vehicleType,
-    'vehicle_registration_no' => $vehicleRegNo,
-    'drivers_id' => $driverID,
-    'image' => $image
-];
-
-if ($newOwnerData) {
-    $own->create($newOwnerData);
-}else{
-    echo 'fail to register owner';
-}
-
-echo 'success';
-}
 
 ?>

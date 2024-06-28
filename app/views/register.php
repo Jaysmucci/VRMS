@@ -21,7 +21,7 @@ include_once '../controllers/drivers-con.php';
   grid-column: span 2;
 }
 .shift-btn {
-    margin-top: 42rem;
+    margin-top: 34rem;
     margin-left: 62rem;
     width: 10rem;
     cursor: pointer;
@@ -79,7 +79,7 @@ include_once '../controllers/drivers-con.php';
         </div>
 
         <!-- Modal body -->
-        <form class="pt-4 md:pt-5 grid-container " method="post" action="../controllers/drivers-con.php" enctype="multipart/form-data">
+        <form autocomplete="off" class="pt-4 md:pt-5 grid-container " method="post" action="../controllers/vehicle-reg-con.php" enctype="multipart/form-data">
           <!-- Owner Details -->
           <div class="">
             <div class=" full-width">
@@ -149,10 +149,10 @@ include_once '../controllers/drivers-con.php';
             </div>
             <div class="">
               <label for="vehicle_type" class="block uppercase mb-2 text-sm font-medium text-gray-900 dark:text-white">Vehicle Type</label>
-              <select id="driver_lga" name="driver_lga" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-dark">
+              <select id="vehicle_type" name="vehicle_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-dark">
                 <option value="" disabled selected>Select Vehicle Type</option>
-                <option value="LGA1">Motorcycle</option>
-                <option value="LGA2">Tricycle</option>
+                <option value="Motorcycle">Motorcycle</option>
+                <option value="Tricycle">Tricycle</option>
               </select>
             </div>
             <div class="">
@@ -178,14 +178,14 @@ include_once '../controllers/drivers-con.php';
                 <option value="LGA5">LGA 5</option>
               </select>
             </div>
-            <div class="">
-              <label for="owner_id" class="block uppercase mb-2 text-sm font-medium text-gray-900 dark:text-white">Owner NIN</label>
+            <!-- <div class="">
+              <label for="owner_nin" class="block uppercase mb-2 text-sm font-medium text-gray-900 dark:text-white">Owner NIN</label>
               <input type="text" name="owner_nin" id="owner_nin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-dark" placeholder="Input Owner NIN" required>
             </div>
             <div class="">
-              <label for="driver_id" class="block uppercase mb-2 text-sm font-medium text-gray-900 dark:text-white">Driver NIN</label>
+              <label for="driver_nin" class="block uppercase mb-2 text-sm font-medium text-gray-900 dark:text-white">Driver NIN</label>
               <input type="text" name="driver_nin" id="driver_nin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-dark" placeholder="Input Driver NIN" required>
-            </div>
+            </div> -->
             <div class="">
               <label for="vehicle_image" class="block uppercase mb-2 text-sm font-medium text-gray-900 dark:text-white">Vehicle Image</label>
               <input type="file" name="vehicle_image" id="vehicle_image" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-dark" required>
@@ -203,8 +203,8 @@ include_once '../controllers/drivers-con.php';
 
             </div>
 
-            <!-- alert box -->
-            <div class="p-4" x-data="{ showAlert: true }" x-init="setTimeout(() => showAlert = false, 5000)">
+            <!-- alert box
+            <div class="p-4" x-data="{ showAlert: true }" x-init="setTimeout(() => showAlert = false, 1000)">
               <div
                 x-show="showAlert"
                 x-transition:enter="transition ease-out duration-300"
@@ -215,9 +215,9 @@ include_once '../controllers/drivers-con.php';
                 x-transition:leave-end="opacity-0 transform scale-90"
                 class="bg-green-500 text-white p-4 rounded-lg shadow-lg"
               >
-                <p>This is an alert box that will disappear after 5 seconds.</p>
+                <p>Vehicle Registered successful!</p>
               </div>
-              <!-- alert box -->
+              alert box
             <div class="p-4" x-data="{ showAlert: true }" x-init="setTimeout(() => showAlert = false, 5000)">
               <div
                 x-show="showAlert"
@@ -230,7 +230,7 @@ include_once '../controllers/drivers-con.php';
                 class="bg-red-500 text-white p-4 rounded-lg shadow-lg"
               >
                 <p>This is an alert box that will disappear after 5 seconds.</p>
-              </div>
+              </div> -->
           
           
 
